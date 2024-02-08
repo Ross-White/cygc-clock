@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import Timer from "./timer";
+import Timer from "./components/timer";
 
 export default function Home() {
   return (
