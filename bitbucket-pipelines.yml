@@ -1,0 +1,9 @@
+pipelines:
+  branches:
+    main: 
+      - step:
+        name: Build
+        image: node:latest
+        script:
+          - npm install
+          - npm run build
