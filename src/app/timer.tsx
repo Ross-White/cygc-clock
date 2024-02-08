@@ -7,10 +7,10 @@ export default function Timer() {
     const [hours, setHours] = useState<number>(0);
     const [minutes, setMinutes] = useState<number>(0);
     const [seconds, setSeconds] = useState<number>(0);
+    const startDate = lastAccident()
 
     useEffect(() => {
         setInterval(() => {
-            const startDate = lastAccident()
             const currentTime = Date.now()
             const timeDifference = currentTime - startDate
             const newDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
