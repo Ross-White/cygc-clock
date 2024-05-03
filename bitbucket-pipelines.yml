@@ -1,4 +1,9 @@
 pipelines:
+  default:
+  - step:
+      name: lint
+      script:
+          - npm run lint
   branches:
     main: 
       - step:
