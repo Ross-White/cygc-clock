@@ -1,4 +1,6 @@
 pipelines:
+  image: node:latest
+
   default:
   - step:
       name: lint
