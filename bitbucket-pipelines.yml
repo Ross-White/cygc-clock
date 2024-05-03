@@ -1,6 +1,6 @@
-pipelines:
-  image: node:latest
+image: node:20.10.0
 
+pipelines:
   branches:
     main: 
       - step:
