@@ -1,5 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
+import styles from "../page.module.css";
 import { lastAccident } from "@/helpers/getLastAccident";
 
 export default function Timer() {
@@ -26,6 +27,10 @@ export default function Timer() {
     })
   
     return(
-        <h2>{days}d {hours}h {minutes}m {seconds}s</h2>
-    )
+        <div className={styles.timer}>
+            <h1>The Clock</h1>
+            <h2>{days}d {hours}h {minutes}m {seconds}s</h2>
+            <h2>Since an accident</h2>
+        </div>
+        )
 }
