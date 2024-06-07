@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
-import styles from "../page.module.css";
 import { lastAccident } from "@/helpers/getLastAccident";
+import { Button } from '@mantine/core';
 
 export default function Timer() {
     const [days, setDays] = useState<number>(0);
@@ -27,10 +27,11 @@ export default function Timer() {
     })
   
     return(
-        <div className={styles.timer}>
+        <div>
             <h1>The Clock</h1>
             <h2>{days}d {hours}h {minutes}m {seconds}s</h2>
             <h2>Since an accident</h2>
+            <Button>Record Accident</Button>
         </div>
-        )
+    )
 }
