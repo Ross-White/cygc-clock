@@ -1,6 +1,6 @@
 import Timer from "./components/timer";
 
-export const lastAccident = async () => {
+const lastAccident = async () => {
   const res = await fetch('https://ll67t4w8d8.execute-api.eu-west-2.amazonaws.com/prod/lastAccident', {
     method: 'GET'
   })
