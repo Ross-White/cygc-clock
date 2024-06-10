@@ -1,14 +1,18 @@
 "use client";
 import { useState, useEffect } from "react";
-import { lastAccident } from "@/helpers/getLastAccident";
+// import { lastAccident } from "@/helpers/getLastAccident";
 import { Button, Flex } from "@mantine/core";
 
-export default function Timer() {
+interface Props {
+  lastAccident: string
+}
+
+export default function Timer({lastAccident}: Props) {
   const [days, setDays] = useState<number>(0);
   const [hours, setHours] = useState<number>(0);
   const [minutes, setMinutes] = useState<number>(0);
   const [seconds, setSeconds] = useState<number>(0);
-  const startDate = lastAccident();
+  const startDate: number = new Date(lastAccident).getTime()
 
   useEffect(() => {
     setInterval(() => {
