@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import '@mantine/core/styles.css';
+import '@mantine/dates/styles.css';
 
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 

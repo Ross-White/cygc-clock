@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-// import { lastAccident } from "@/helpers/getLastAccident";
-import { Button, Flex } from "@mantine/core";
+import { Flex } from "@mantine/core";
 
 interface Props {
   lastAccident: string
@@ -36,12 +35,9 @@ export default function Timer({lastAccident}: Props) {
 
   return (
     <Flex direction={"column"} align={"center"}>
-      <h1>The Clock</h1>
       <h2>
         {days}d {hours}h {minutes}m {seconds}s
       </h2>
-      <h2>Since an accident</h2>
-      <Button>Record Accident</Button>
     </Flex>
   );
 }
