@@ -13,7 +13,7 @@ export default function AccidentForm() {
   const form = useForm({
     mode: 'uncontrolled',
     initialValues: {
-      name: '',
+      member: '',
       date: '',
       description: ''
     }
@@ -39,7 +39,7 @@ export default function AccidentForm() {
   return (
     <form onSubmit={form.onSubmit((values) => submit(values))}>
       <TextInput
-        label="name"
+        label="member"
         placeholder="Member's Name"
         key={form.key('member')}
         {...form.getInputProps('member')}
