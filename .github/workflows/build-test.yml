@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env: 
+      ACCIDENTS_API_KEY: ${{ secrets.ACCIDENTS_API_KEY }}
+      ACCIDENTS_API_ENDPOINT: ${{ secrets.ACCIDENTS_API_ENDPOINT }}
 
     steps:
       - name: Checkout repository
